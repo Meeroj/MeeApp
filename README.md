@@ -1,71 +1,65 @@
-# Getting Started with Create React App
+# ![RealWorld Example App](logo.png)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+> ### Example Node.Js (Koa.js + Knex) codebase containing real world examples (CRUD, auth, advanced patterns, etc) that adheres to the [RealWorld](https://github.com/gothinkster/realworld-example-apps) spec and API.
 
-## Available Scripts
+This repo is functionality complete — PRs and issues welcome!
 
-In the project directory, you can run:
+This codebase was created to demonstrate a fully fledged fullstack application built with **Koa.js + Knex** including CRUD operations, authentication, routing, pagination, and more.
 
-### `npm start`
+We've gone to great lengths to adhere to the **Koa.js + Knex** community styleguides & best practices.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+For more information on how to this works with other frontends/backends, head over to the [RealWorld](https://github.com/gothinkster/realworld) repo.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+# Getting started
 
-### `npm test`
+## Installation
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. Instal [Node.JS](https://nodejs.org/en/download/package-manager/) latest version
+2. Clone this repo
+3. Install dependencies, just run in project folder: `npm i` or `yarn`
 
-### `npm run build`
+## Usage
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. run `npm start` to start server
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Testing
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. run `npm test` for tests
 
-### `npm run eject`
+## Server Configuration (optional)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+You can use `.env` file, to configure project like this:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```
+NODE_ENV = development
+PORT = 3000
+SECRET = secret
+DB_CLIENT = sqlite3
+#DB_CONNECTION = postgres://user:password@localhost:5432/db_name
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+you can just copy `.example-env`
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Variables description
 
-## Learn More
+`NODE_ENV` - specify env: development/production/test. `development` by default
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+`NODE_PORT` - specify port: `3000` by default
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+`SECRET` - custom secret for generating passwords. `secret` by default
 
-### Code Splitting
+`DB_CLIENT` - database to use. `pg` - postgress or `sqlite3`. `sqlite3` by default
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+`DB_CONNECTION` - db connection string for `postgress` database.
 
-### Analyzing the Bundle Size
+## Fixtures (optional)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+1. load fixtures: `npm run db:load` (it uses settings from `.env`). Don't forget to set `NODE_ENV`.
 
-### Making a Progressive Web App
+## Styleguide
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+[![Standard - JavaScript Style Guide](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/feross/standard)
 
-### Advanced Configuration
+# How it works
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-# MeeApp
+> Describe the general architecture of your app here
